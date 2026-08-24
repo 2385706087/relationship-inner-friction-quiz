@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="12 道关系内耗自我探索题，帮助你看见更容易进入的关系消耗循环。" />
+  <title>关系内耗小测试</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero" aria-labelledby="app-title">
+      <div>
+        <h1 id="app-title">关系内耗小测试</h1>
+        <p>12道题，看见你最容易被哪种关系循环消耗</p>
+      </div>
+      <img class="hero-art" src="assets/tulips-vase.png" alt="粉色郁金香与陶瓷杯插画" />
+    </header>
+
+    <section id="start-screen" class="screen active" aria-labelledby="start-title">
+      <div class="intro-panel">
+        <p class="intro-lead" id="start-title">选最接近你<strong>第一反应</strong>的答案，不用寻找“正确选项”。</p>
+        <ul class="intro-list">
+          <li><span>01</span> 每次只选一个最符合的反应</li>
+          <li><span>02</span> 完成约需 2 分钟</li>
+          <li><span>03</span> 结果会给出对应的行动建议</li>
+        </ul>
+        <button id="start-btn" class="primary-btn" type="button">开始测试</button>
+      </div>
+    </section>
+
+    <section id="quiz-screen" class="screen" aria-live="polite">
+      <div class="progress-head">
+        <p>第 <strong id="question-number">1</strong> 题 / 12</p>
+        <p id="progress-percent">8%</p>
+      </div>
+      <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+
+      <div class="question-panel">
+        <h2 id="question-text"></h2>
+        <div id="options" class="options" role="radiogroup" aria-labelledby="question-text"></div>
+        <div class="quiz-actions">
+          <button id="back-btn" class="text-btn" type="button">上一题</button>
+          <button id="next-btn" class="primary-btn" type="button" disabled>下一题</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="result-screen" class="screen" aria-live="polite">
+      <article class="result-card">
+        <div id="result-symbol" class="result-symbol" aria-hidden="true"></div>
+        <p class="result-label">你的主要模式</p>
+        <h2 id="result-title"></h2>
+        <p id="result-subtitle" class="result-subtitle"></p>
+        <p id="result-summary" class="result-summary"></p>
+        <button id="advice-btn" class="primary-btn" type="button">看看我的行动建议</button>
+      </article>
+
+      <section id="advice-panel" class="advice-panel" tabindex="-1">
+        <div class="secondary-result">
+          <p>你的第二倾向</p>
+          <strong id="secondary-title"></strong>
+        </div>
+        <h3>先从这 3 步开始</h3>
+        <ol id="advice-list"></ol>
+        <div class="boundary-box">
+          <strong>给自己的一句边界提醒</strong>
+          <p id="boundary-copy"></p>
+        </div>
+        <p class="result-note">结果描述的是你在当前关系情境中更常出现的反应，不代表固定人格，也不判断关系中谁对谁错。</p>
+      </section>
+
+      <div class="result-actions">
+        <button id="copy-btn" class="secondary-btn" type="button">复制结果</button>
+        <button id="restart-btn" class="text-btn" type="button">重新测试</button>
+      </div>
+    </section>
+
+    <footer>
+      <span aria-hidden="true">●</span>
+      结果仅用于自我探索，不是心理诊断
+    </footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
+
