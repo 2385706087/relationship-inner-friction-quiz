@@ -1,5 +1,10 @@
 # 关系内耗小测试
 
+## 在线访问
+
+- 网站：https://2385706087.github.io/relationship-inner-friction-quiz/
+- 源码：https://github.com/2385706087/relationship-inner-friction-quiz
+
 ## 使用方式
 
 直接用浏览器打开 `index.html`，或在本目录启动静态服务器：
